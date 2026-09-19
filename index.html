@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kombucha viva de Pisac, Valle Sagrado. Te fermentado dos veces, en vidrio, en lotes pequenos.">
+<meta property="og:title" content="Horizon Kombucha">
+<meta property="og:description" content="Kombucha viva. Pisac, Valle Sagrado, Peru.">
+<meta property="og:url" content="https://horizonkombucha.github.io/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F7F4EC">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127862;</text></svg>">
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
+<script>
+  (function () {
+    var l = 'es';
+    try {
+      var s = localStorage.getItem('hk2-lang');
+      if (s === 'es' || s === 'en') l = s;
+      else if ((navigator.language || 'es').slice(0, 2).toLowerCase() !== 'es') l = 'en';
+    } catch (e) {
+      if ((navigator.language || 'es').slice(0, 2).toLowerCase() !== 'es') l = 'en';
+    }
+    document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.setAttribute('lang', l);
+  })();
+</script>
+
+<title>Horizon Kombucha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+
+<style>
+  :root {
+    --bone:      #F7F4EC;
+    --bone-2:    #EFEADD;
+    --ink:       #141310;
+    --ink-soft:  #57513F;
+    --line:      #DCD4C1;
+    --terrace:   #12241A;
+    --terrace-2: #1B3025;
+    --t-ink:     #F1EDE0;
+    --t-soft:    #9DAF9C;
+    --t-line:    #2C4234;
+    --amber:     #A96C15;
+    --amber-br:  #D69A3C;
+    --muna:      #5F7A46;
+
+    --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+    --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+    --page: 62rem;
+    --read: 33rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bone:      #14120D;
+      --bone-2:    #1C1913;
+      --ink:       #F0EBDC;
+      --ink-soft:  #A79E86;
+      --line:      #37311F;
+      --terrace:   #0A130E;
+      --terrace-2: #101C15;
+      --t-ink:     #EDE8DA;
+      --t-soft:    #8D9E8C;
+      --t-line:    #21322A;
+      --amber:     #D69A3C;
+      --amber-br:  #E7B45E;
+      --muna:      #8CA870;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bone:      #14120D;
+    --bone-2:    #1C1913;
+    --ink:       #F0EBDC;
+    --ink-soft:  #A79E86;
+    --line:      #37311F;
+    --terrace:   #0A130E;
+    --terrace-2: #101C15;
+    --t-ink:     #EDE8DA;
+    --t-soft:    #8D9E8C;
+    --t-line:    #21322A;
+    --amber:     #D69A3C;
+    --amber-br:  #E7B45E;
+    --muna:      #8CA870;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- language ---- */
+  :root .en { display: none; }   /* :root raises specificity above any single-class rule */
+  :root[data-lang="en"] .es { display: none; }
+  :root[data-lang="en"] .en { display: revert; }
+
+  .page { width: 100%; max-width: var(--page); margin-inline: auto; padding-inline: 1.6rem; }
+  .read { max-width: var(--read); }
+
+  /* ---- top bar ---- */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.1rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .wordmark {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .langbar { display: flex; align-items: center; gap: 0.1rem; }
+
+  .langbar button {
+    font-family: var(--body);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    color: var(--ink-soft);
+    padding: 0.3rem 0.45rem;
+    cursor: pointer;
+  }
+
+  .langbar button[aria-pressed="true"] { color: var(--amber); }
+  .langbar .sep { color: var(--line); font-size: 0.68rem; }
+
+  /* ---- hero ---- */
+  .hero { position: relative; overflow: hidden; }
+
+  #fizz {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .hero .page { position: relative; z-index: 1; }
+
+  .hero-inner { padding-block: 3rem 3.5rem; }
+
+  .place {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 0 0 1.6rem;
+  }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3rem, 12vw, 6.5rem);
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.4rem;
+    text-wrap: balance;
+  }
+
+  h1 .it {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--amber);
+  }
+
+  .standfirst {
+    font-size: 1.12rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 30rem;
+  }
+
+  /* ---- spec strip (terrace edge) ---- */
+  .specs {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .spec {
+    padding: 1.2rem 0;
+    border-left: 1px solid var(--line);
+    padding-left: 1.1rem;
+  }
+
+  .spec:first-child { border-left: 0; padding-left: 0; }
+
+  .spec-n {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 0.3rem;
+  }
+
+  .spec-l {
+    display: block;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    line-height: 1.35;
+  }
+
+  /* ---- sections ---- */
+  section { padding-block: 3.5rem; }
+
+  .eyebrow {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin: 0 0 1.1rem;
+  }
+
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 5.5vw, 2.7rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0 0 1.2rem;
+    text-wrap: balance;
+  }
+
+  h2 .it { font-style: italic; color: var(--amber); }
+
+  p { margin: 0 0 1.05rem; }
+  p:last-child { margin-bottom: 0; }
+  .soft { color: var(--ink-soft); }
+
+  /* ---- flavours ---- */
+  .fl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 2rem;
+  }
+
+  .fl {
+    background: var(--bone);
+    padding: 1.6rem 1.5rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .fl.pending { background: var(--bone-2); }
+
+  .chip {
+    align-self: flex-start;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.55rem;
+    border: 1px solid currentColor;
+    color: var(--muna);
+  }
+
+  .chip.soon { color: var(--ink-soft); }
+
+  .fl-name {
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .fl-notes {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .fl-body { font-size: 0.93rem; color: var(--ink-soft); margin: 0; }
+
+  /* ---- process, on the terrace band ---- */
+  .band {
+    background: var(--terrace);
+    color: var(--t-ink);
+  }
+
+  .band .eyebrow { color: var(--amber-br); }
+  .band .soft { color: var(--t-soft); }
+  .band h2 .it { color: var(--amber-br); }
+
+  .steps {
+    display: grid;
+    gap: 1px;
+    background: var(--t-line);
+    border: 1px solid var(--t-line);
+    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+
+  .step {
+    background: var(--terrace);
+    padding: 1.4rem 1.3rem 1.5rem;
+  }
+
+  .step-k {
+    display: block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber-br);
+    margin-bottom: 0.6rem;
+  }
+
+  .step-t {
+    font-family: var(--display);
+    font-size: 1.12rem;
+    font-weight: 500;
+    margin: 0 0 0.4rem;
+  }
+
+  .step-b { font-size: 0.9rem; color: var(--t-soft); margin: 0; line-height: 1.5; }
+
+  /* ---- sceptic pull ---- */
+  .pull {
+    border-left: 2px solid var(--amber);
+    padding-left: 1.4rem;
+    margin-top: 2.5rem;
+    max-width: var(--read);
+  }
+
+  .pull p {
+    font-family: var(--display);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  /* ---- ginger beer ---- */
+  .gb {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1.5rem;
+  }
+
+  .gb-card {
+    border: 1px solid var(--line);
+    padding: 1.6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  /* ---- contact ---- */
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.8rem;
+    background: var(--amber-br);
+    color: #14120D;
+    font-family: var(--body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    transition: transform 0.15s ease, filter 0.15s ease;
+  }
+
+  .cta:hover { filter: brightness(1.07); transform: translateY(-1px); }
+  .cta svg { width: 1.15em; height: 1.15em; flex: none; }
+
+  .cta-note { font-size: 0.85rem; color: var(--t-soft); margin: 1rem 0 0; }
+
+  /* ---- footer ---- */
+  footer {
+    border-top: 1px solid var(--line);
+    padding-block: 2.5rem 3rem;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+  }
+
+  .foot-mark {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin: 0 0 0.6rem;
+  }
+
+  footer p { margin: 0 0 0.3rem; }
+
+  a { color: var(--amber); }
+
+  :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  @media (max-width: 34rem) {
+    .specs { grid-template-columns: 1fr; }
+    .spec { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); }
+    .spec:first-child { border-top: 0; }
+  }
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+  <canvas id="fizz" aria-hidden="true"></canvas>
+
+  <div class="page">
+    <div class="topbar">
+      <p class="wordmark">Horizon</p>
+      <div class="langbar">
+        <button type="button" id="btn-es" aria-pressed="true">ES</button>
+        <span class="sep">/</span>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <div class="hero-inner">
+      <p class="place es">Pisac &middot; Valle Sagrado &middot; Per&uacute;</p>
+      <p class="place en">Pisac &middot; Sacred Valley &middot; Peru</p>
+
+      <h1 class="es">Kombucha<br><span class="it">viva</span>.</h1>
+      <h1 class="en">Living<br><span class="it">kombucha</span>.</h1>
+
+      <p class="standfirst es">T&eacute; fermentado dos veces, en vidrio, en lotes peque&ntilde;os. Seca, &aacute;cida y con gas propio. Sin pasteurizar y sin nada a&ntilde;adido despu&eacute;s de tapar.</p>
+      <p class="standfirst en">Tea fermented twice, in glass, in small batches. Dry, tart, and carbonated by itself. Unpasteurised, with nothing added once the cap goes on.</p>
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <span class="spec-n">8 L</span>
+        <span class="spec-l es">por jarra de fermentaci&oacute;n</span>
+        <span class="spec-l en">per fermentation jar</span>
+      </div>
+      <div class="spec">
+        <span class="spec-n">2</span>
+        <span class="spec-l es">fermentaciones &mdash; la segunda en la botella</span>
+        <span class="spec-l en">ferments &mdash; the second in the bottle</span>
+      </div>
+      <div class="spec">
+        <span class="spec-n">300 ml &middot; 1 L</span>
+        <span class="spec-l es">vidrio retornable</span>
+        <span class="spec-l en">returnable glass</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="page">
+  <p class="eyebrow es">Los sabores</p>
+  <p class="eyebrow en">The flavours</p>
+
+  <h2 class="es">Kion en todos.<br>Lo dem&aacute;s <span class="it">cambia</span>.</h2>
+  <h2 class="en">Ginger in every one.<br>The rest <span class="it">changes</span>.</h2>
+
+  <p class="soft read es">El kion es la base de la casa &mdash; est&aacute; en cada botella. Alrededor de &eacute;l van una hierba y una fruta. La fruta entra entera en la botella para la segunda fermentaci&oacute;n, no como jugo ni como jarabe.</p>
+  <p class="soft read en">Ginger is the house base &mdash; it's in every bottle. A herb and a fruit go around it. The fruit goes into the bottle whole for the second ferment, not as juice or syrup.</p>
+
+  <div class="fl-grid">
+    <div class="fl">
+      <span class="chip es">Disponible</span>
+      <span class="chip en">Available</span>
+      <p class="fl-name">Kion &middot; Lim&oacute;n &middot; Menta</p>
+      <p class="fl-notes es">&Aacute;cida &middot; fresca &middot; filuda</p>
+      <p class="fl-notes en">Tart &middot; fresh &middot; sharp</p>
+      <p class="fl-body es">La m&aacute;s directa. El limón adelante y la menta enfriando el final.</p>
+      <p class="fl-body en">The most direct one. Lemon up front, mint cooling the finish.</p>
+    </div>
+
+    <div class="fl">
+      <span class="chip es">Disponible</span>
+      <span class="chip en">Available</span>
+      <p class="fl-name">Kion &middot; Lim&oacute;n &middot; Mu&ntilde;a</p>
+      <p class="fl-notes es">Herbal &middot; seca &middot; serrana</p>
+      <p class="fl-notes en">Herbal &middot; dry &middot; alpine</p>
+      <p class="fl-body es">La mu&ntilde;a le pone un fondo resinoso que la menta no tiene. La m&aacute;s de ac&aacute;.</p>
+      <p class="fl-body en">Muña gives it a resinous base note that mint doesn't have. The most local-tasting.</p>
+    </div>
+
+    <div class="fl">
+      <span class="chip es">Disponible</span>
+      <span class="chip en">Available</span>
+      <p class="fl-name">Kion &middot; Menta &middot; Pi&ntilde;a</p>
+      <p class="fl-notes es">Redonda &middot; suave &middot; sin lim&oacute;n</p>
+      <p class="fl-notes en">Rounded &middot; soft &middot; no lemon</p>
+      <p class="fl-body es">Sin lim&oacute;n a prop&oacute;sito. La pi&ntilde;a cierra el sabor en vez de estirarlo.</p>
+      <p class="fl-body en">No lemon, on purpose. Pineapple closes the flavour off instead of stretching it.</p>
+    </div>
+
+    <div class="fl pending">
+      <span class="chip soon es">En prueba</span>
+      <span class="chip soon en">In testing</span>
+      <p class="fl-name">Kion &middot; Mu&ntilde;a &middot; Pi&ntilde;a</p>
+      <p class="fl-notes es">La m&aacute;s suave de todas</p>
+      <p class="fl-notes en">The softest of them all</p>
+      <p class="fl-body es">Mu&ntilde;a y pi&ntilde;a juntas, sin nada c&iacute;trico. Todav&iacute;a ajustando la dosis.</p>
+      <p class="fl-body en">Muña and pineapple together, nothing citrus. Still adjusting the dose.</p>
+    </div>
+  </div>
+
+  <p class="soft read es" style="margin-top:1.6rem;font-size:0.9rem"><em>La mu&ntilde;a es una menta silvestre andina. Es m&aacute;s seca y m&aacute;s resinosa que la hierbabuena, y crece en estos cerros.</em></p>
+  <p class="soft read en" style="margin-top:1.6rem;font-size:0.9rem"><em>Muña is a wild Andean mint. It's drier and more resinous than garden mint, and it grows on these hillsides.</em></p>
+</section>
+
+<div class="band">
+  <section class="page">
+    <p class="eyebrow es">C&oacute;mo se hace</p>
+    <p class="eyebrow en">How it's made</p>
+
+    <h2 class="es">Dos fermentaciones,<br>nada <span class="it">m&aacute;s</span>.</h2>
+    <h2 class="en">Two ferments,<br>nothing <span class="it">else</span>.</h2>
+
+    <p class="soft read es">No lleva jugos concentrados, ni saborizantes, ni gas inyectado. El gas lo produce la botella sola.</p>
+    <p class="soft read en">No concentrates, no flavourings, no injected carbonation. The bottle makes its own fizz.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-k es">Primera</span>
+        <span class="step-k en">First</span>
+        <p class="step-t es">T&eacute; y cultivo</p>
+        <p class="step-t en">Tea and culture</p>
+        <p class="step-b es">T&eacute; endulzado y un cultivo vivo en jarras de 8 litros, hasta que casi todo el az&uacute;car se ha ido y el l&iacute;quido queda &aacute;cido.</p>
+        <p class="step-b en">Sweetened tea and a live culture in 8-litre jars, until most of the sugar is gone and the liquid turns tart.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-k es">Segunda</span>
+        <span class="step-k en">Second</span>
+        <p class="step-t es">Fruta en la botella</p>
+        <p class="step-t en">Fruit in the bottle</p>
+        <p class="step-b es">Kion, hierbas en hoja entera y fruta en trozos entran a la botella. Se tapa y fermenta otra vez adentro. De ah&iacute; sale el gas.</p>
+        <p class="step-b en">Ginger, whole-leaf herbs and pieces of fruit go into the bottle. It's capped and ferments again inside. That's where the fizz comes from.</p>
+      </div>
+
+      <div class="step">
+        <span class="step-k es">Despu&eacute;s</span>
+        <span class="step-k en">After</span>
+        <p class="step-t es">Fr&iacute;o, y nada m&aacute;s</p>
+        <p class="step-t en">Cold, and nothing else</p>
+        <p class="step-b es">Va directo al fr&iacute;o. No se pasteuriza ni se filtra, as&iacute; que el sedimento del fondo es normal &mdash; es el cultivo.</p>
+        <p class="step-b en">Straight into the cold. It isn't pasteurised or filtered, so the sediment at the bottom is normal — that's the culture.</p>
+      </div>
+    </div>
+
+    <div class="pull">
+      <p class="es">&laquo;&iquest;Nunca probaste kombucha? Es t&eacute; fermentado: &aacute;cido, con gas, nada dulce. Si te gusta la sidra seca o el agua mineral con lim&oacute;n, vas por buen camino.&raquo;</p>
+      <p class="en">&ldquo;Never had kombucha? It's fermented tea: tart, fizzy, not sweet at all. If you like dry cider or sparkling water with lemon, you're in the right place.&rdquo;</p>
+    </div>
+  </section>
+</div>
+
+<section class="page">
+  <p class="eyebrow es">Ginger beer</p>
+  <p class="eyebrow en">Ginger beer</p>
+
+  <h2 class="es">Del mismo taller,<br>ya en <span class="it">botella</span>.</h2>
+  <h2 class="en">Same kitchen,<br>already <span class="it">bottled</span>.</h2>
+
+  <div class="gb">
+    <div>
+      <p class="soft es">La ginger beer no lleva t&eacute;. Se hace con un cultivo vivo de kion &mdash; un <em>ginger bug</em> &mdash; que se alimenta cada d&iacute;a con kion rallado y az&uacute;car hasta que burbujea solo.</p>
+      <p class="soft en">The ginger beer has no tea in it. It's made with a live ginger culture &mdash; a ginger bug &mdash; fed grated ginger and sugar every day until it bubbles on its own.</p>
+      <p class="soft es">Sale m&aacute;s suave que la kombucha, con m&aacute;s gas, y con el kion mucho m&aacute;s adelante. Empieza con un solo sabor.</p>
+      <p class="soft en">It comes out softer than the kombucha, fizzier, with the ginger much further forward. Starting with one flavour.</p>
+    </div>
+
+    <div class="gb-card">
+      <span class="chip es">Disponible</span>
+      <span class="chip en">Available</span>
+      <p class="fl-name">Kion &middot; Lim&oacute;n</p>
+      <p class="fl-notes es">Picante &middot; dulce &middot; muy gasificada</p>
+      <p class="fl-notes en">Hot &middot; sweet &middot; very fizzy</p>
+      <p class="fl-body es">Botella de 300 ml. Cantidades limitadas mientras crece el cultivo.</p>
+      <p class="fl-body en">300 ml bottle. Limited quantities while the culture grows.</p>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <section class="page">
+    <p class="eyebrow es">D&oacute;nde encontrarlo</p>
+    <p class="eyebrow en">Where to find it</p>
+
+    <h2 class="es">En Pisac, y directo <span class="it">conmigo</span>.</h2>
+    <h2 class="en">In Pisac, and straight <span class="it">from me</span>.</h2>
+
+    <p class="soft read es">Lo dejo en caf&eacute;s y tiendas del pueblo cada semana, y vendo directo a quien escriba. Si tienes un local y quieres tenerla en la carta, escr&iacute;beme y coordinamos una prueba.</p>
+    <p class="soft read en">I drop it at cafés and shops around town each week, and sell direct to anyone who writes. If you run a place and want it on the menu, message me and we'll set up a tasting.</p>
+
+    <a class="cta" href="https://wa.me/972504848895" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.71.59.26 1.05.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+      <span class="es">Escribir por WhatsApp</span>
+      <span class="en">Message on WhatsApp</span>
+    </a>
+
+    <p class="cta-note es">Entregas los viernes en Pisac y alrededores.</p>
+    <p class="cta-note en">Deliveries on Fridays in Pisac and around.</p>
+  </section>
+</div>
+
+<footer class="page">
+  <p class="foot-mark">Horizon Kombucha</p>
+  <p class="es">Hecho a mano en Pisac, Valle Sagrado, Per&uacute;.</p>
+  <p class="en">Handmade in Pisac, Sacred Valley, Peru.</p>
+  <p class="es">Producto artesanal fermentado, sin pasteurizar. Mantener refrigerado. Abrir con cuidado: tiene gas natural.</p>
+  <p class="en">Artisanal fermented product, unpasteurised. Keep refrigerated. Open carefully &mdash; it is naturally carbonated.</p>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btnEs = document.getElementById('btn-es');
+    var btnEn = document.getElementById('btn-en');
+
+    function setLang(lang) {
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      btnEs.setAttribute('aria-pressed', String(lang === 'es'));
+      btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+      try { localStorage.setItem('hk2-lang', lang); } catch (e) {}
+    }
+
+    setLang(root.getAttribute('data-lang') === 'en' ? 'en' : 'es');
+    btnEs.addEventListener('click', function () { setLang('es'); });
+    btnEn.addEventListener('click', function () { setLang('en'); });
+  })();
+
+  /* Carbonation: slow bubbles rising behind the hero. Decorative only. */
+  (function () {
+    var cv = document.getElementById('fizz');
+    if (!cv) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var ctx = cv.getContext('2d');
+    var host = cv.parentElement;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = 0, h = 0, bubbles = [];
+
+    function accent() {
+      var v = getComputedStyle(document.documentElement).getPropertyValue('--amber').trim();
+      return v || '#A96C15';
+    }
+
+    function seed() {
+      var n = Math.max(14, Math.round(w / 46));
+      bubbles = [];
+      for (var i = 0; i < n; i++) {
+        bubbles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: 1.2 + Math.random() * 4.5,
+          v: 0.10 + Math.random() * 0.28,
+          drift: (Math.random() - 0.5) * 0.16,
+          a: 0.10 + Math.random() * 0.22,
+          p: Math.random() * Math.PI * 2
+        });
+      }
+    }
+
+    function resize() {
+      w = host.clientWidth;
+      h = host.clientHeight;
+      cv.width = Math.round(w * dpr);
+      cv.height = Math.round(h * dpr);
+      cv.style.width = w + 'px';
+      cv.style.height = h + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      seed();
+    }
+
+    var col = accent();
+
+    function frame() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.strokeStyle = col;
+      ctx.lineWidth = 1;
+      for (var i = 0; i < bubbles.length; i++) {
+        var b = bubbles[i];
+        b.y -= b.v;
+        b.p += 0.012;
+        var x = b.x + Math.sin(b.p) * 7 + b.drift;
+        if (b.y + b.r < 0) { b.y = h + b.r; b.x = Math.random() * w; }
+        ctx.globalAlpha = b.a;
+        ctx.beginPath();
+        ctx.arc(x, b.y, b.r, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+      requestAnimationFrame(frame);
+    }
+
+    resize();
+    window.addEventListener('resize', function () { col = accent(); resize(); });
+    requestAnimationFrame(frame);
+  })();
+</script>
+
+</body>
+</html>
