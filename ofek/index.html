@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ofek - Pisac, Valle Sagrado. Horizon Kombucha, Horizon OS, DJ Horizon.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F4EC">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127756;</text></svg>">
+<script>
+  (function () {
+    var l = 'es';
+    try {
+      var s = localStorage.getItem('hk2-lang');
+      if (s === 'es' || s === 'en') l = s;
+      else if ((navigator.language || 'es').slice(0, 2).toLowerCase() !== 'es') l = 'en';
+    } catch (e) {
+      if ((navigator.language || 'es').slice(0, 2).toLowerCase() !== 'es') l = 'en';
+    }
+    document.documentElement.setAttribute('data-lang', l);
+    document.documentElement.setAttribute('lang', l);
+  })();
+</script>
+<title>Ofek &middot; Horizon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<style>
+  :root {
+    --bone: #F7F4EC; --bone-2: #EFEADD; --ink: #141310; --ink-soft: #57513F;
+    --line: #DCD4C1; --terrace: #12241A; --amber: #A96C15; --amber-br: #D69A3C;
+    --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+    --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --page: 44rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bone: #14120D; --bone-2: #1C1913; --ink: #F1EDE0; --ink-soft: #A79E86;
+      --line: #322C20; --amber: #D69A3C;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bone: #14120D; --bone-2: #1C1913; --ink: #F1EDE0; --ink-soft: #A79E86;
+    --line: #322C20; --amber: #D69A3C;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :root .en { display: none; }
+  :root[data-lang="en"] .es { display: none; }
+  :root[data-lang="en"] .en { display: revert; }
+
+  .page { width: 100%; max-width: var(--page); margin-inline: auto; padding-inline: 1.6rem; }
+
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1rem; padding-block: 0.9rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .wordmark {
+    font-family: var(--display); font-size: 1rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; margin: 0;
+    color: var(--ink); text-decoration: none;
+  }
+
+  .langbar { display: flex; align-items: center; gap: 0.1rem; }
+  .langbar button {
+    font-family: var(--body); font-size: 0.68rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    background: none; border: none; color: var(--ink-soft);
+    padding: 0.3rem 0.45rem; cursor: pointer;
+  }
+  .langbar button[aria-pressed="true"] { color: var(--amber); }
+  .langbar .sep { color: var(--line); font-size: 0.68rem; }
+
+  main { padding-block: 2.6rem 2rem; }
+
+  .eyebrow {
+    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--amber); margin: 0 0 0.8rem;
+  }
+
+  h1 {
+    font-family: var(--display); font-weight: 400;
+    font-size: clamp(2.2rem, 7vw, 3.1rem); line-height: 1.05;
+    letter-spacing: -0.015em; margin: 0 0 1.1rem;
+  }
+
+  h1 .it { font-style: italic; color: var(--amber); }
+
+  p { margin: 0 0 0.9rem; }
+  p:last-child { margin-bottom: 0; }
+  .soft { color: var(--ink-soft); }
+
+  .lede { font-size: 1.06rem; }
+
+  .rule { border: 0; border-top: 1px solid var(--line); margin: 2.2rem 0 1.6rem; }
+
+  .sec-label {
+    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--ink-soft); margin: 0 0 1.1rem;
+  }
+
+  .things { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+
+  .thing {
+    background: var(--bone); padding: 1.3rem 1.3rem 1.4rem;
+    display: block; text-decoration: none; color: inherit;
+    transition: background 0.15s ease;
+  }
+  a.thing:hover { background: var(--bone-2); }
+
+  .thing-k {
+    display: block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--amber); margin-bottom: 0.5rem;
+  }
+
+  .thing-n {
+    font-family: var(--display); font-size: 1.3rem; font-weight: 500;
+    margin: 0 0 0.3rem; line-height: 1.2;
+  }
+
+  .thing-b { font-size: 0.92rem; color: var(--ink-soft); margin: 0; line-height: 1.5; }
+
+  .thing-u {
+    display: inline-block; margin-top: 0.6rem; font-size: 0.78rem;
+    font-weight: 600; letter-spacing: 0.04em; color: var(--amber);
+  }
+
+  footer {
+    border-top: 1px solid var(--line); padding-block: 1.6rem 2.4rem;
+    font-size: 0.82rem; color: var(--ink-soft);
+  }
+  footer a { color: var(--amber); }
+
+  :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="page">
+  <div class="topbar">
+    <a class="wordmark" href="/">Horizon</a>
+    <div class="langbar">
+      <button type="button" id="btn-es" aria-pressed="true">ES</button>
+      <span class="sep">/</span>
+      <button type="button" id="btn-en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <p class="eyebrow es">Sobre m&iacute;</p>
+  <p class="eyebrow en">About</p>
+
+  <h1 class="es">Ofek &mdash; <span class="it">horizonte</span>.</h1>
+  <h1 class="en">Ofek &mdash; <span class="it">horizon</span>.</h1>
+
+  <p class="lede es">Mi nombre significa &laquo;horizonte&raquo; en hebreo. Por eso todo lo que hago lleva ese nombre.</p>
+  <p class="lede en">My name means &ldquo;horizon&rdquo; in Hebrew. That's why everything I make carries it.</p>
+
+  <p class="soft es">Vivo en Pisac, en el Valle Sagrado. Trabajo en tecnolog&iacute;a de forma remota, fermento en la cocina, hago m&uacute;sica y construyo cosas en internet. Tres proyectos, un solo nombre.</p>
+  <p class="soft en">I live in Pisac, in the Sacred Valley. I work in tech remotely, ferment in my kitchen, make music, and build things on the internet. Three projects, one name.</p>
+
+  <hr class="rule">
+
+  <p class="sec-label es">En lo que ando</p>
+  <p class="sec-label en">What I'm making</p>
+
+  <div class="things">
+
+    <a class="thing" href="/">
+      <span class="thing-k es">Bebida</span>
+      <span class="thing-k en">Drink</span>
+      <p class="thing-n">Horizon Kombucha</p>
+      <p class="thing-b es">Kombucha y ginger beer fermentadas en casa, en vidrio y en lotes peque&ntilde;os, para caf&eacute;s y tiendas de Pisac.</p>
+      <p class="thing-b en">Kombucha and ginger beer fermented at home, in glass, in small batches, for cafés and shops around Pisac.</p>
+      <span class="thing-u es">horizonkombucha.github.io &rarr;</span>
+      <span class="thing-u en">horizonkombucha.github.io &rarr;</span>
+    </a>
+
+    <a class="thing" href="https://horizon-os.app" target="_blank" rel="noopener">
+      <span class="thing-k es">Aplicaci&oacute;n</span>
+      <span class="thing-k en">App</span>
+      <p class="thing-n">Horizon OS</p>
+      <p class="thing-b es">Un sistema operativo personal: h&aacute;bitos, finanzas, visi&oacute;n y calendario en un solo lugar. Lo constru&iacute; para m&iacute; y termin&oacute; siendo para cualquiera.</p>
+      <p class="thing-b en">A personal life OS: habits, money, vision and calendar in one place. I built it for myself and it ended up being for anyone.</p>
+      <span class="thing-u es">horizon-os.app &rarr;</span>
+      <span class="thing-u en">horizon-os.app &rarr;</span>
+    </a>
+
+    <div class="thing">
+      <span class="thing-k es">M&uacute;sica</span>
+      <span class="thing-k en">Music</span>
+      <p class="thing-n">DJ Horizon</p>
+      <p class="thing-b es">Sets para pistas conscientes &mdash; tribal, org&aacute;nico y con groove. Toco en el valle y subo lo que grabo.</p>
+      <p class="thing-b en">Sets for conscious dance floors — tribal, organic, groove-led. I play around the valley and upload what I record.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="page">
+  <p class="es">Pisac, Valle Sagrado, Per&uacute;.</p>
+  <p class="en">Pisac, Sacred Valley, Peru.</p>
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btnEs = document.getElementById('btn-es');
+    var btnEn = document.getElementById('btn-en');
+    function setLang(lang) {
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      btnEs.setAttribute('aria-pressed', String(lang === 'es'));
+      btnEn.setAttribute('aria-pressed', String(lang === 'en'));
+      try { localStorage.setItem('hk2-lang', lang); } catch (e) {}
+    }
+    setLang(root.getAttribute('data-lang') === 'en' ? 'en' : 'es');
+    btnEs.addEventListener('click', function () { setLang('es'); });
+    btnEn.addEventListener('click', function () { setLang('en'); });
+  })();
+</script>
+
+</body>
+</html>
