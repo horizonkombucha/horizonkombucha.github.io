@@ -193,7 +193,7 @@
   .wa-top svg { width: 1.1em; height: 1.1em; flex: none; }
 
   /* ---- hero call to action ---- */
-  .hero-cta { margin-top: 2rem; }
+  .hero-cta { margin-top: 1.5rem; }
   .cta-hero { margin-top: 0; }
 
   .hero-cta-note {
@@ -222,7 +222,7 @@
 
   .hero .page { position: relative; z-index: 1; }
 
-  .hero-inner { padding-block: 2.6rem 3rem; }
+  .hero-inner { padding-block: 2rem 2.4rem; }
 
   .place {
     font-size: 0.66rem;
@@ -294,7 +294,7 @@
   }
 
   /* ---- sections ---- */
-  section { padding-block: 3.5rem; }
+  section { padding-block: 2.5rem; }
 
   .eyebrow {
     font-size: 0.66rem;
@@ -302,22 +302,22 @@
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--amber);
-    margin: 0 0 1.1rem;
+    margin: 0 0 0.8rem;
   }
 
   h2 {
     font-family: var(--display);
     font-weight: 400;
-    font-size: clamp(1.9rem, 5.5vw, 2.7rem);
-    line-height: 1.1;
+    font-size: clamp(1.7rem, 4.8vw, 2.25rem);
+    line-height: 1.12;
     letter-spacing: -0.015em;
-    margin: 0 0 1.2rem;
+    margin: 0 0 0.9rem;
     text-wrap: balance;
   }
 
   h2 .it { font-style: italic; color: var(--amber); }
 
-  p { margin: 0 0 1.05rem; }
+  p { margin: 0 0 0.85rem; }
   p:last-child { margin-bottom: 0; }
   .soft { color: var(--ink-soft); }
 
@@ -420,7 +420,7 @@
   .pull {
     border-left: 2px solid var(--amber);
     padding-left: 1.4rem;
-    margin-top: 2.5rem;
+    margin-top: 1.8rem;
     max-width: var(--read);
   }
 
@@ -436,14 +436,14 @@
   .gb {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: 2rem;
+    gap: 1.6rem;
     align-items: start;
-    margin-top: 1.5rem;
+    margin-top: 1.3rem;
   }
 
   .gb-card {
     border: 1px solid var(--line);
-    padding: 1.6rem 1.5rem;
+    padding: 1.3rem 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
@@ -473,7 +473,7 @@
   /* ---- footer ---- */
   footer {
     border-top: 1px solid var(--line);
-    padding-block: 2.5rem 3rem;
+    padding-block: 2rem 2.4rem;
     font-size: 0.84rem;
     color: var(--ink-soft);
   }
@@ -499,9 +499,9 @@
   }
 
   @media (max-width: 34rem) {
-    .specs { grid-template-columns: 1fr; }
-    .spec { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); }
-    .spec:first-child { border-top: 0; }
+    .spec { padding: 0.9rem 0; padding-left: 0.7rem; }
+    .spec-n { font-size: 1.15rem; }
+    .spec-l { font-size: 0.56rem; letter-spacing: 0.1em; }
   }
 </style>
 
@@ -554,13 +554,13 @@
     <div class="specs">
       <div class="spec">
         <span class="spec-n">8 L</span>
-        <span class="spec-l es">por jarra de fermentaci&oacute;n</span>
-        <span class="spec-l en">per fermentation jar</span>
+        <span class="spec-l es">por jarra</span>
+        <span class="spec-l en">per jar</span>
       </div>
       <div class="spec">
         <span class="spec-n">2</span>
-        <span class="spec-l es">fermentaciones &mdash; la segunda en la botella</span>
-        <span class="spec-l en">ferments &mdash; the second in the bottle</span>
+        <span class="spec-l es">fermentaciones</span>
+        <span class="spec-l en">ferments</span>
       </div>
       <div class="spec">
         <span class="spec-n">300 ml &middot; 1 L</span>
@@ -572,59 +572,30 @@
 </div>
 
 <section class="page">
-  <p class="eyebrow es">Los sabores</p>
-  <p class="eyebrow en">The flavours</p>
+  <p class="eyebrow es">El sabor</p>
+  <p class="eyebrow en">The flavour</p>
 
-  <h2 class="es">Kion en todos.<br>Lo dem&aacute;s <span class="it">cambia</span>.</h2>
-  <h2 class="en">Ginger in every one.<br>The rest <span class="it">changes</span>.</h2>
+  <h2 class="es">Kion, lim&oacute;n y <span class="it">mu&ntilde;a</span>.</h2>
+  <h2 class="en">Ginger, lemon and <span class="it">mu&ntilde;a</span>.</h2>
 
-  <p class="soft read es">El kion es la base de la casa &mdash; est&aacute; en cada botella. Alrededor de &eacute;l van una hierba y una fruta. La fruta entra entera en la botella para la segunda fermentaci&oacute;n, no como jugo ni como jarabe.</p>
-  <p class="soft read en">Ginger is the house base &mdash; it's in every bottle. A herb and a fruit go around it. The fruit goes into the bottle whole for the second ferment, not as juice or syrup.</p>
-
-  <div class="fl-grid">
-    <div class="fl">
-      <span class="chip es">Disponible</span>
-      <span class="chip en">Available</span>
-      <p class="fl-name">Kion &middot; Lim&oacute;n &middot; Menta</p>
-      <p class="fl-notes es">&Aacute;cida &middot; fresca &middot; filuda</p>
-      <p class="fl-notes en">Tart &middot; fresh &middot; sharp</p>
-      <p class="fl-body es">La m&aacute;s directa. El limón adelante y la menta enfriando el final.</p>
-      <p class="fl-body en">The most direct one. Lemon up front, mint cooling the finish.</p>
+  <div class="gb">
+    <div>
+      <p class="soft es">Un solo sabor, hecho bien. El kion es la base; el lim&oacute;n y la mu&ntilde;a entran enteros a la botella para la segunda fermentaci&oacute;n, no como jugo ni como jarabe.</p>
+      <p class="soft en">One flavour, done properly. Ginger is the base; lemon and mu&ntilde;a go into the bottle whole for the second ferment, not as juice or syrup.</p>
+      <p class="soft es" style="font-size:0.9rem"><em>La mu&ntilde;a es una menta silvestre andina: m&aacute;s seca y m&aacute;s resinosa que la hierbabuena, y crece en estos cerros.</em></p>
+      <p class="soft en" style="font-size:0.9rem"><em>Mu&ntilde;a is a wild Andean mint: drier and more resinous than garden mint, and it grows on these hillsides.</em></p>
     </div>
 
-    <div class="fl">
+    <div class="gb-card">
       <span class="chip es">Disponible</span>
       <span class="chip en">Available</span>
       <p class="fl-name">Kion &middot; Lim&oacute;n &middot; Mu&ntilde;a</p>
       <p class="fl-notes es">Herbal &middot; seca &middot; serrana</p>
       <p class="fl-notes en">Herbal &middot; dry &middot; alpine</p>
-      <p class="fl-body es">La mu&ntilde;a le pone un fondo resinoso que la menta no tiene. La m&aacute;s de ac&aacute;.</p>
-      <p class="fl-body en">Muña gives it a resinous base note that mint doesn't have. The most local-tasting.</p>
-    </div>
-
-    <div class="fl">
-      <span class="chip es">Disponible</span>
-      <span class="chip en">Available</span>
-      <p class="fl-name">Kion &middot; Menta &middot; Pi&ntilde;a</p>
-      <p class="fl-notes es">Redonda &middot; suave &middot; sin lim&oacute;n</p>
-      <p class="fl-notes en">Rounded &middot; soft &middot; no lemon</p>
-      <p class="fl-body es">Sin lim&oacute;n a prop&oacute;sito. La pi&ntilde;a cierra el sabor en vez de estirarlo.</p>
-      <p class="fl-body en">No lemon, on purpose. Pineapple closes the flavour off instead of stretching it.</p>
-    </div>
-
-    <div class="fl pending">
-      <span class="chip soon es">En prueba</span>
-      <span class="chip soon en">In testing</span>
-      <p class="fl-name">Kion &middot; Mu&ntilde;a &middot; Pi&ntilde;a</p>
-      <p class="fl-notes es">La m&aacute;s suave de todas</p>
-      <p class="fl-notes en">The softest of them all</p>
-      <p class="fl-body es">Mu&ntilde;a y pi&ntilde;a juntas, sin nada c&iacute;trico. Todav&iacute;a ajustando la dosis.</p>
-      <p class="fl-body en">Muña and pineapple together, nothing citrus. Still adjusting the dose.</p>
+      <p class="fl-body es">300 ml y 1 L, en vidrio.</p>
+      <p class="fl-body en">300 ml and 1 L, in glass.</p>
     </div>
   </div>
-
-  <p class="soft read es" style="margin-top:1.6rem;font-size:0.9rem"><em>La mu&ntilde;a es una menta silvestre andina. Es m&aacute;s seca y m&aacute;s resinosa que la hierbabuena, y crece en estos cerros.</em></p>
-  <p class="soft read en" style="margin-top:1.6rem;font-size:0.9rem"><em>Muña is a wild Andean mint. It's drier and more resinous than garden mint, and it grows on these hillsides.</em></p>
 </section>
 
 <div class="band">
@@ -638,34 +609,8 @@
     <p class="soft read es">No lleva jugos concentrados, ni saborizantes, ni gas inyectado. El gas lo produce la botella sola.</p>
     <p class="soft read en">No concentrates, no flavourings, no injected carbonation. The bottle makes its own fizz.</p>
 
-    <div class="steps">
-      <div class="step">
-        <span class="step-k es">Primera</span>
-        <span class="step-k en">First</span>
-        <p class="step-t es">T&eacute; y cultivo</p>
-        <p class="step-t en">Tea and culture</p>
-        <p class="step-b es">T&eacute; endulzado y un cultivo vivo en jarras de 8 litros, hasta que casi todo el az&uacute;car se ha ido y el l&iacute;quido queda &aacute;cido.</p>
-        <p class="step-b en">Sweetened tea and a live culture in 8-litre jars, until most of the sugar is gone and the liquid turns tart.</p>
-      </div>
-
-      <div class="step">
-        <span class="step-k es">Segunda</span>
-        <span class="step-k en">Second</span>
-        <p class="step-t es">Fruta en la botella</p>
-        <p class="step-t en">Fruit in the bottle</p>
-        <p class="step-b es">Kion, hierbas en hoja entera y fruta en trozos entran a la botella. Se tapa y fermenta otra vez adentro. De ah&iacute; sale el gas.</p>
-        <p class="step-b en">Ginger, whole-leaf herbs and pieces of fruit go into the bottle. It's capped and ferments again inside. That's where the fizz comes from.</p>
-      </div>
-
-      <div class="step">
-        <span class="step-k es">Despu&eacute;s</span>
-        <span class="step-k en">After</span>
-        <p class="step-t es">Fr&iacute;o, y nada m&aacute;s</p>
-        <p class="step-t en">Cold, and nothing else</p>
-        <p class="step-b es">Va directo al fr&iacute;o. No se pasteuriza ni se filtra, as&iacute; que el sedimento del fondo es normal &mdash; es el cultivo.</p>
-        <p class="step-b en">Straight into the cold. It isn't pasteurised or filtered, so the sediment at the bottom is normal — that's the culture.</p>
-      </div>
-    </div>
+    <p class="soft read es">T&eacute; endulzado fermenta con un cultivo vivo en jarras de 8 L hasta quedar &aacute;cido. Despu&eacute;s el kion y las hierbas en hoja entera entran a la botella y fermenta otra vez adentro &mdash; de ah&iacute; sale el gas. Va directo al fr&iacute;o, sin pasteurizar ni filtrar, as&iacute; que el sedimento del fondo es normal: es el cultivo.</p>
+    <p class="soft read en">Sweetened tea ferments with a live culture in 8-litre jars until it turns tart. Then ginger and whole-leaf herbs go into the bottle and it ferments again inside &mdash; that's where the fizz comes from. Straight into the cold, unpasteurised and unfiltered, so the sediment at the bottom is normal: that's the culture.</p>
 
     <div class="pull">
       <p class="es">&laquo;&iquest;Nunca probaste kombucha? Es t&eacute; fermentado: &aacute;cido, con gas, nada dulce. Si te gusta la sidra seca o el agua mineral con lim&oacute;n, vas por buen camino.&raquo;</p>
@@ -683,18 +628,16 @@
 
   <div class="gb">
     <div>
-      <p class="soft es">La ginger beer no lleva t&eacute;. Se hace con un cultivo vivo de kion &mdash; un <em>ginger bug</em> &mdash; que se alimenta cada d&iacute;a con kion rallado y az&uacute;car hasta que burbujea solo.</p>
-      <p class="soft en">The ginger beer has no tea in it. It's made with a live ginger culture &mdash; a ginger bug &mdash; fed grated ginger and sugar every day until it bubbles on its own.</p>
-      <p class="soft es">Sale m&aacute;s suave que la kombucha, con m&aacute;s gas, y con el kion mucho m&aacute;s adelante. Empieza con un solo sabor.</p>
-      <p class="soft en">It comes out softer than the kombucha, fizzier, with the ginger much further forward. Starting with one flavour.</p>
+      <p class="soft es">Sin t&eacute;. Se hace con un cultivo vivo de kion &mdash; un <em>ginger bug</em> &mdash; alimentado cada d&iacute;a con kion rallado y az&uacute;car hasta que burbujea solo. Sale m&aacute;s suave que la kombucha, con m&aacute;s gas y el kion mucho m&aacute;s adelante.</p>
+      <p class="soft en">No tea in it. It's made with a live ginger culture &mdash; a ginger bug &mdash; fed grated ginger and sugar every day until it bubbles on its own. Softer than the kombucha, fizzier, with the ginger much further forward.</p>
     </div>
 
     <div class="gb-card">
       <span class="chip es">Disponible</span>
       <span class="chip en">Available</span>
       <p class="fl-name">Kion &middot; Lim&oacute;n</p>
-      <p class="fl-notes es">Picante &middot; dulce &middot; muy gasificada</p>
-      <p class="fl-notes en">Hot &middot; sweet &middot; very fizzy</p>
+      <p class="fl-notes es">Picante &middot; dulce</p>
+      <p class="fl-notes en">Hot &middot; sweet</p>
       <p class="fl-body es">Botella de 300 ml. Cantidades limitadas mientras crece el cultivo.</p>
       <p class="fl-body en">300 ml bottle. Limited quantities while the culture grows.</p>
     </div>
@@ -709,8 +652,8 @@
     <h2 class="es">En Pisac, y directo <span class="it">conmigo</span>.</h2>
     <h2 class="en">In Pisac, and straight <span class="it">from me</span>.</h2>
 
-    <p class="soft read es">Lo dejo en caf&eacute;s y tiendas del pueblo cada semana, y vendo directo a quien escriba. Si tienes un local y quieres tenerla en la carta, escr&iacute;beme y coordinamos una prueba.</p>
-    <p class="soft read en">I drop it at cafés and shops around town each week, and sell direct to anyone who writes. If you run a place and want it on the menu, message me and we'll set up a tasting.</p>
+    <p class="soft read es">Lo dejo en caf&eacute;s y tiendas del pueblo cada semana, y vendo directo a quien escriba. Si tienes un local, escr&iacute;beme y coordinamos una prueba.</p>
+    <p class="soft read en">I drop it at cafés and shops around town each week, and sell direct to anyone who writes. If you run a place, message me and we'll set up a tasting.</p>
 
     <a class="cta" href="https://wa.me/972504848895" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.21-8.24 8.21Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.71.59.26 1.05.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
